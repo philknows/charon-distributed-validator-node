@@ -108,7 +108,7 @@ services:
     #networks: [dvnode]
     network_mode: "host"
     environment:
-      BEACON_NODE_ADDRESS: http://charon:3600
+      BEACON_NODE_ADDRESS: http://0.0.0.0:3600
       NETWORK: ${NETWORK:-holesky}
       BUILDER_API_ENABLED: ${BUILDER_API_ENABLED:-false}
     volumes:
