@@ -49,7 +49,7 @@ services:
     environment:
       - CHARON_JAEGER_ADDRESS=jaeger:6831 # jaeger UDP agent
       - CHARON_JAEGER_SERVICE=charon
-      - CHARON_LOKI_ADDRESSES=${CHARON_LOKI_ADDRESSES:-http://loki:3100/loki/api/v1/push}
+      - CHARON_LOKI_ADDRESSES=${CHARON_LOKI_ADDRESSES:-http://0.0.0.0:3100/loki/api/v1/push}
       - CHARON_LOKI_SERVICE=charon
 
 networks:
