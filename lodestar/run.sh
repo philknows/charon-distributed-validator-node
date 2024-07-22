@@ -1,11 +1,11 @@
 #!/bin/sh
 
-BUILDER_SELECTION="executiononly"
+BUILDER_SELECTION="executionalways"
 
 # If the builder API is enabled, override the builder selection to signal Lodestar to always propose blinded blocks.
 if [[ $BUILDER_API_ENABLED == "true" ]];
 then
-  BUILDER_SELECTION="maxprofit"
+  BUILDER_SELECTION="executionalways"
 fi
 
 for f in /home/charon/validator_keys/keystore-*.json; do
